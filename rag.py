@@ -47,10 +47,9 @@ def create_vector_store():
         raise ValueError("docs folder has no valid .txt documents. Add at least one non-empty txt file.")
 
     vectorstore = Chroma.from_documents(
-        documents=docs,
-        embedding=SimpleEmbeddings(),
-        persist_directory="chroma_db"
-    )
+    documents=docs,
+    embedding=SimpleEmbeddings()
+)
 
     return vectorstore
 
